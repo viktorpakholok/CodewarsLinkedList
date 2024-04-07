@@ -1,13 +1,13 @@
-''''''
+'''A solution of "Linked Lists - Remove Duplicates"'''
 
 class Node(object):
-    ''''''
+    '''A class representing a node in a linked list'''
     def __init__(self, data):
         self.data = data
         self.next = None
 
-def remove_duplicates(head):
-    ''''''
+def remove_duplicates(head: 'Node') -> 'Node':
+    '''Removes duplicate nodes from a sorted linked list'''
     if head is None or head.next is None:
         return head
     to_change = head
