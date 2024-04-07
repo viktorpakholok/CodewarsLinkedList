@@ -1,14 +1,14 @@
-''''''
+'''A solution of "Linked Lists - Sorted Insert"'''
 
 class Node(object):
-    ''''''
+    '''A class representing a node in a linked list'''
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-def sorted_insert(head, data):
-    ''''''
+def sorted_insert(head: 'Node', data: int) -> 'Node':
+    '''Inserts a new node with the given data into a sorted linked list'''
     if not head:
         return Node(data)
     if data < head.data:
