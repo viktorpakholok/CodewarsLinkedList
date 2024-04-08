@@ -1,12 +1,12 @@
-''''''
+'''A soultion of "Swap Node Pairs In Linked List"'''
 
 class Node:
-    ''''''
+    '''Represents a node in a linked list'''
     def __init__(self, next=None):
         self.next = next
 
-def swap_pairs(head):
-    ''''''
+def swap_pairs(head: 'Node') -> 'Node':
+    '''Swaps pairs of neighbouring nodes in a linked list'''
     if head is None or head.next is None:
         return head
 
