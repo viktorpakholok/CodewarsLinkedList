@@ -1,19 +1,20 @@
-''''''
+'''A solution of "Linked Lists - Recursive Reverse"'''
 
 class Node(object):
-    ''''''
+    '''Represents a node in a linked list'''
     def __init__(self, data=None):
         self.data = data
         self.next = None
 
-def reverse(head):
-    ''''''
+def reverse(head: 'Node') -> 'Node':
+    '''Reverses a linked list iteratively'''
     if not head or not head.next:
         return head
     res = Node(head.data)
     to_change = res
 
-    def reverse_def(head, count = 0):
+    def reverse_def(head: 'Node', count: int = 0) -> 'Node':
+        '''Helper function to reverse the linked list recursively'''
         nonlocal to_change
         nonlocal res
         if not head and count == 0:
