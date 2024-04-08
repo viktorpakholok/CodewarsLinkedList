@@ -1,19 +1,19 @@
-''''''
+'''A solution of "Linked Lists - Alternating Split"'''
 
 class Node(object):
-    ''''''
+    '''Represents a node in a linked list'''
     def __init__(self, data=None):
         self.data = data
         self.next = None
 
 class Context(object):
-    ''''''
-    def __init__(self, first, second):
+    '''Represents the context for splitting a linked list into two alternate lists'''
+    def __init__(self, first: 'Node', second: 'Node'):
         self.first = first
         self.second = second
 
-def alternating_split(head):
-    ''''''
+def alternating_split(head: 'Node') -> 'Context':
+    '''Splits a linked list into two alternate lists'''
     counter, first, second, res_1, res_2 = 0, None, None, None, None
     while head:
         if not counter % 2:
