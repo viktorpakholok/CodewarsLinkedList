@@ -12,13 +12,10 @@ def swap_pairs(head):
 
     res = None
     while head and head.next:
-        next_ = head.next.next
-        first = head
-        second = head.next
+        next_, first, second = head.next.next, head, head.next
         if not res:
             res = second
-        second.next = first
-        first.next = next_
+        second.next, first.next = first, next_
         head = head.next
         if head and head.next:
             first.next = head.next
